@@ -1,6 +1,8 @@
 import StyledComponentsRegistry from "@/lib/AntdRegistry";
 import "./globals.css";
 import type { Metadata } from "next";
+import Providers from "@/lib/Provider";
+import Navbar from "@/components/ui/Navbar/Navbar";
 
 export const metadata: Metadata = {
   title: "Doctors Portal",
@@ -14,9 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <StyledComponentsRegistry>
+      <Providers>
         <body>{children}</body>
-      </StyledComponentsRegistry>
+      </Providers>
     </html>
   );
 }

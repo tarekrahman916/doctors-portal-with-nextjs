@@ -1,5 +1,11 @@
+import PublicHeader from "@/components/view/Header/PublicHeader";
 import React from "react";
 
-export default function layout() {
-  return <div>Public layout</div>;
+export default function layout({ children }: { children: React.ReactNode }) {
+  return (
+    <div>
+      <PublicHeader />
+      {children}
+    </div>
+  );
 }
